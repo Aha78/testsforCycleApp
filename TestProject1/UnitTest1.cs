@@ -32,7 +32,6 @@ namespace Test
         {
             HttpClient client = new();
             HttpResponseMessage response = client.GetAsync("https://functionapp220230415180354.azurewebsites.net/api/Stations?page=1").Result;
-
             Assert.AreEqual(response.StatusCode, System.Net.HttpStatusCode.OK);
         }
 
@@ -41,8 +40,6 @@ namespace Test
         {
             HttpClient client = new ();
             HttpResponseMessage response = client.GetAsync("https://functionapp220230415180354.azurewebsites.net/api/stationdetails?id=001").Result;
-           
-
             Assert.AreEqual(response.StatusCode, System.Net.HttpStatusCode.OK);
         }
 
